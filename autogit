@@ -9,7 +9,7 @@ if [ "$1" == "-v" ] || [ "$1" == "--version" ]; then
 	exit 1
 fi
 
-if [ $# -lt 1 ] || [ $# -gt 3 ]; then 
+if [ $# -lt 1 ]; then 
 	echo -e " "
 	echo -e "ERROR: Please provide at least one argument (i.e. commit message)."
 	exit 1
