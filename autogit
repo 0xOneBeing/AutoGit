@@ -15,7 +15,7 @@ echo -e "$ git add ."
 git add .
 echo " "
 
-echo -e "$ git commit -m '$commit_message'"
+echo -e "$ git commit -m \"$commit_message\""
 git commit -m "$commit_message"
 echo " "
 
