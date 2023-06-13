@@ -5,8 +5,10 @@ install_dir="/usr/local/bin"
 script_dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
 
 if [ ! -d "$install_dir" ]; then
+	echo -e " "
 	echo "ERROR: Installation directory '$install_dir' does not exist!"
 	echo "Please create it manually then try again"
+	echo -e " "
 	exit 1
 fi
 
@@ -23,7 +25,9 @@ sudo cp "$script_dir/autogit.1" "$autogit_manpage"
 
 sudo mandb
 
+echo -e " "
 echo "Installtion completed!"
 echo "The autogit script is now available for use globally."
 echo " "
 echo "Run \"man autogit\""
+echo -e " "
