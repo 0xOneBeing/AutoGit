@@ -26,8 +26,9 @@ sudo cp "$script_dir/autogit.1" "$autogit_manpage"
 sudo mandb
 
 echo -e " "
-echo "Installtion completed!"
+echo "INSTALLATION COMPLETED!!!"
+echo -e " "
 echo "The autogit script is now available for use globally."
 echo " "
-echo "Run \"man autogit\""
+echo "Run \"man autogit\" for the usage manual."
 echo -e " "
