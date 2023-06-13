@@ -1,0 +1,40 @@
+.TH AUTOGIT 1 "June 2023" "AutoGit Manual"
+
+.SH NAME
+autogit \- automate git add, commit, and push
+
+.SH SYNOPSIS
+.B autogit
+.I commit_message
+
+.SH DESCRIPTION
+.B autogit
+is a shell script that automates the process of executing the following Git commands:
+.TP
+.BR "git add ."
+.TP
+.BR "git commit -m <commit_message>"
+.TP
+.BR "git push -u origin main"
+
+.SH OPTIONS
+.IP
+.I commit_message
+Specified the commit message for the changes.
+
+.SH EXAMPLES
+To commit changes with the message "Update READNE files":
+.IP
+.B autogit "Update README file"
+
+.SH SEE ALSO
+The full documentation for
+.B git
+can be found at:
+.BR <https://git-scm.com/doc>
+
+.SH AUTHOR
+AutoGit was developed by Sunday Oruwhone.
+
+.SH COPYRIGHT
+Copyright (c) 2023 Sunday Oruwhone. This is free software, see the source code for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
