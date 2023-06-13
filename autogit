@@ -1,7 +1,7 @@
 #!/bin/bash
 
-if [ -z "$1" ]; then 
-	echo -e "ERROR: Please provide a commit message."
+if [ $# -lt 1 ] || [ $# -gt 3 ]; then 
+	echo -e "ERROR: Please provide at least a commit message."
 	exit 1;
 fi
 
@@ -19,8 +19,17 @@ echo -e "$ git commit -m '$commit_message'"
 git commit -m "$commit_message"
 echo " "
 
-echo -e "$ git push -u origin main"
-git push -u origin main
+if [ $# -eq 3 ]; then
+	echo -e "$ git push -u '$2' '$3'"
+	git push -u "$2" "$3"
+elif [ $# -eq 2 ]; then
+	echo -e "ERROR: If there is a commit message and remote specified, then there must be a branch specified as well."
+	exit 1
+else
+	echo -e "$ git push -u origin main"
+	git push -u origin main
+fi
+
 echo " "
 
 echo -e "$ git status"
