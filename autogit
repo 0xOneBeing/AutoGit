@@ -1,0 +1,30 @@
+#!/bin/bash
+
+if [ -z "$1" ]; then 
+	echo -e "ERROR: Please provide a commit message."
+	exit 1;
+fi
+
+commit_message="$1"
+
+echo " "
+echo "======================================== AutoGit ========================================"
+echo " "
+
+echo -e "$ git add ."
+git add .
+echo " "
+
+echo -e "$ git commit -m '$commit_message'"
+git commit -m "$commit_message"
+echo " "
+
+echo -e "$ git push -u origin main"
+git push -u origin main
+echo " "
+
+echo -e "$ git status"
+git status
+
+echo " "
+echo "======================================== AutoGit ========================================"
