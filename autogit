@@ -1,5 +1,12 @@
 #!/bin/bash
 
+version_no="1.0.0"
+
+if [ "$1" == "-v" ] || [ "$1" == "--version" ]; then
+	echo -e " "
+	echo "AutoGit v. $version_no"
+	echo -e " "
+
 if [ $# -lt 1 ] || [ $# -gt 3 ]; then 
 	echo -e "ERROR: Please provide at least a commit message."
 	exit 1;
