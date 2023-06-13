@@ -4,7 +4,7 @@ AutoGit is a shell script that automates the process of executing Git commands t
 
 ## Installation
 
-1. Clone the repository: git clone https://github.com/OxOneBeing/autogit.git
+1. Clone the repository: `git clone https://github.com/OxOneBeing/autogit.git`
 
 2. Change directory to the `autogit` directory. Run `cd ./autogit`.
 
