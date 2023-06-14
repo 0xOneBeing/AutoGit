@@ -2,6 +2,14 @@
 
 AutoGit is a shell script that automates the process of executing Git commands to add, commit, and push changes to a Git repository.
 
+## Requirements
+Meet this requirement ensures that AutoGit works smoothly on your system.
+1. Linux or Unix-like system: AutoGit is designed to run on any Linux or Unix-like system including macOS and several Linux distros not limited to Ubuntu, Kali Linux, centOS, Debian, etc. For Windows users, you can consider alternative means of getting Linux/Unix system and/or environment on your machine but using WSL which simplifies the process is highly recommended though only availble for recent versions of Windows 10 and totally supported on Windows 11. Check out (WSL) [https://learn.microsoft.com/en-us/windows/wsl/install].
+2. Git: AutoGit automates basic Git commands, therefore you must have Git installed on your system. Run `git --version` from your command line to confirm installation. If not already installed, kindly install it from the (official Git website) [https://git-scm.com].
+3. Bash Shell: AutoGit is a shell script written in Bash. Ensure that bash is available on your system. Most Linux distros come with Bash pre-installed.
+4. Internet connectivity:
+5. Permissions:
+
 ## Installation
 
 1. Clone the repository: `git clone https://github.com/OxOneBeing/autogit.git`
@@ -15,7 +23,11 @@ AutoGit is a shell script that automates the process of executing Git commands t
 ## Usage
 
 To use `autogit`, run the script with the commit message as the argument:
-E.g. `autogit "Updated 'README.md' file."`
+E.g. `autogit "Updated 'README.md' file."` . This is with an assumption that you're pushing the remote `origin` to `main`.
+
+
+Extensibly, you could specify a different remote and branch by including them as two further arguments.
+Example: `autogit "Initialized a dev branch!" devRemote devBranch` . Note that if you're specifying a remote, you MUST specify a branch.
 
 ### Options
 
